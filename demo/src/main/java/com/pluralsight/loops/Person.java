@@ -19,4 +19,13 @@ public class Person {
     public String getLastName() {
         return lastName;
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " - Age: " + age;
+    }
 }
