@@ -32,7 +32,7 @@ public class Program {
         double age = 0;
         int count = 0;
 
-        for(Person person : persons){
+        for(Person person : Person){
             age += person.getAge();
             count++;
         }
