@@ -36,4 +36,12 @@ public class Program {
             age += person.getAge();
             count++;
         }
+        double averageAge = age / count;
+        System.out.println("Average Age: " + averageAge);
 
+        Person oldestAge = Person.get(0);
+        for(Person person : Person) {
+            if (person.getAge() > oldestAge.getAge()){
+                oldestAge = person;
+            }
+        }
