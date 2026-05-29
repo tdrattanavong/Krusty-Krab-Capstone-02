@@ -1,6 +1,8 @@
 package Food;
 
 public class Chips extends OtherProducts {
+    public static final String[] FLAVORS = {"Cool Ranch","Sweet Spicy Chili", "BBQ", "Salt & Vinegar", "Jalapeno"};
+
     private String type;
 
     public Chips(String type) {

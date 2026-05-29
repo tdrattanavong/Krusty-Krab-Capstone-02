@@ -1,6 +1,8 @@
 package Food;
 
 public class Drink extends OtherProducts {
+    public static final String[] FLAVORS = {"Cola", "Orange Soda","Lemonade", "Iced Tea", "Water"};
+
     private String size;
     private String flavor;
 
