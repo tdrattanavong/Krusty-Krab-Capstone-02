@@ -2,6 +2,7 @@ package Food;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Sandwich {
     private int size;
@@ -40,13 +41,11 @@ public class Sandwich {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(size).append("\" ").append(bread).append(" bread");
-        if (toasted) sb.append(" (toasted)");
-        for (Toppings t : toppings) {
-            sb.append("\n   - ").append(t);
-        }
-        sb.append(String.format("%n   Subtotal: $%.2f", getPrice()));
-        return sb.toString();
+        String header = size + "\" " + bread + " bread" + (toasted ? " (toasted)" : "");
+        String toppingLines = toppings.stream()
+                .map(t -> "\n   - " + t)
+                .collect(Collectors.joining());
+        String footer = String.format("%n   Subtotal: $%.2f", getPrice());
+        return header + toppingLines + footer;
     }
 }

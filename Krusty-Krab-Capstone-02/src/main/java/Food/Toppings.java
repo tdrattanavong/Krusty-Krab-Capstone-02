@@ -19,4 +19,3 @@ public abstract class Toppings {
         return name + (isExtra ? " (extra)" : "");
     }
 }
-
